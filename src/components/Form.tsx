@@ -6,6 +6,7 @@ export default function Form() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [age, setAge] = useState("");
+  const [count, setCount] = useState(0);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,6 +30,10 @@ export default function Form() {
     }
   };
 
+  const Count_thecount = () => {
+    setCount(count + 1);
+  };
+
   return (
     <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
       <div className="relative z-0 w-full mb-5 group">
@@ -44,7 +49,6 @@ export default function Form() {
           NAME
         </label>
       </div>
-
       <div className="relative z-0 w-full mb-5 group">
         <input
           type="text"
@@ -58,7 +62,6 @@ export default function Form() {
           EMAIL
         </label>
       </div>
-
       <div className="relative z-0 w-full mb-5 group">
         <input
           type="number"
@@ -72,13 +75,12 @@ export default function Form() {
           AGE
         </label>
       </div>
-
       <button
         type="submit"
-        className="w-16 rounded bg-blue-900 text-white hover:bg-slate-800"
+        className="w-20 h-8 rounded bg-blue-900 text-white hover:bg-slate-800"
       >
         Add
-      </button>
+      </button>{" "}
     </form>
   );
 }

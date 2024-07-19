@@ -1,11 +1,17 @@
-import PersonalData from "../../components/PersonalData";
+import AllPersonalData from "../../components/AllPersonalData";
+import Navbar from "../../components/Navbar";
+import earthVideo from "../home/earth.mp4";
 
 const PersonalDatas = () => {
   return (
-    <div className="py-10 h-screen space-y-5 overflow-y-auto">
-      <h1 className="font-bold text-3xl text-center">My All Data</h1>
-      <div className="max-w-lg mx-auto bg-black rounded-md p-5 space-y-6">
-        <PersonalData />
+    <div className="">
+      <Navbar />
+      <div className="relative z-10 p-4 ">
+        <div>
+          <div className="max-w-lg mx-auto  rounded-md p-5 mt-0">
+            <AllPersonalData />
+          </div>
+        </div>
       </div>
     </div>
   );

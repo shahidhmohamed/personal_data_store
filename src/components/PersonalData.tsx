@@ -44,18 +44,18 @@ export default function PersonalDatas() {
       {personalDatas.length > 0 ? (
         personalDatas.map((data) => (
           <div key={data._id} className="flex items-center gap-1 mb-2">
-            <label className="flex items-center gap-2 border rounded-md p-2 border-gray-400 bg-white hover:bg-slate-50 grow">
+            <label className="flex items-center gap-2 border p-2 border-gray-400 bg-white hover:bg-slate-50 grow rounded-lg">
               <span className="text-gray-700">{data.name}</span>
-              <span className="text-gray-700">{data.email}</span>
-              <span className="text-gray-700">{data.age}</span>
+              {/* <span className="text-gray-700">{data.email}</span>
+              <span className="text-gray-700">{data.age}</span> */}
             </label>
             <button onClick={() => onDelete(data._id)} className="p-2">
-              <Trash2 size={20} className="text-gray-500" />
+              <Trash2 size={20} className="text-red-700" />
             </button>
           </div>
         ))
       ) : (
-        <p className="text-white">No data available</p>
+        <p className="text-red-700">No data available</p>
       )}
     </div>
   );
