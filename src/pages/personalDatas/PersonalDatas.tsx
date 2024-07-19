@@ -1,10 +1,9 @@
 import AllPersonalData from "../../components/AllPersonalData";
 import Navbar from "../../components/Navbar";
-import earthVideo from "../home/earth.mp4";
 
 const PersonalDatas = () => {
   return (
-    <div className="">
+    <div>
       <Navbar />
       <div className="relative z-10 p-4 ">
         <div>

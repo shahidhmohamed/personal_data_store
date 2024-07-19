@@ -44,8 +44,8 @@ export default function PersonalDatas() {
       {personalDatas.length > 0 ? (
         personalDatas.map((data) => (
           <div key={data._id} className="flex items-center gap-1 mb-2">
-            <label className="flex items-center gap-2 border p-2 border-gray-400 bg-white hover:bg-slate-50 grow rounded-lg">
-              <span className="text-gray-700">{data.name}</span>
+            <label className="flex items-center gap-2 border p-2 border-gray-400 bg-gradient-to-bl hover:bg-slate-50 grow rounded-lg text-white hover:text-red-700">
+              <span className="text-white hover:text-red-700">{data.name}</span>
               {/* <span className="text-gray-700">{data.email}</span>
               <span className="text-gray-700">{data.age}</span> */}
             </label>

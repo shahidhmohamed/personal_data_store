@@ -40,24 +40,23 @@ export default function AllPersonalData() {
   };
 
   return (
-    <div className="max-w-md mx-auto">
+    <div>
       <table className="min-w-full bg-white border border-gray-300 rounded-lg">
         <thead>
-          <tr className="bg-gray-200">
-            <th className="py-2 px-4 border-b">Name</th>
-            <th className="py-2 px-4 border-b">Email</th>
-            <th className="py-2 px-4 border-b">Age</th>
-            <th className="py-2 px-4 border-b">Actions</th>
+          <tr className="bg-amber-400">
+            <th className="py-4 px-8 border-b">Name</th>
+            <th className="py-4 px-8 border-b">Email</th>
+            <th className="py-4 px-8 border-b">Age</th>
           </tr>
         </thead>
         <tbody>
           {personalDatas.length > 0 ? (
             personalDatas.map((data) => (
-              <tr key={data._id} className="hover:bg-gray-100">
-                <td className="py-2 px-4 border-b">{data.name}</td>
-                <td className="py-2 px-4 border-b">{data.email}</td>
-                <td className="py-2 px-4 border-b">{data.age}</td>
-                <td className="py-2 px-4 border-b text-center">
+              <tr key={data._id} className="hover:bg-red-600">
+                <td className="py-4 px-8 border-b">{data.name}</td>
+                <td className="py-4 px-8 border-b">{data.email}</td>
+                <td className="py-4 px-8 border-b">{data.age}</td>
+                <td className="py-4 px-8 border-b text-center">
                   <button
                     onClick={() => onDelete(data._id)}
                     className="text-red-700 hover:text-red-900"
