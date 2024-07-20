@@ -1,9 +1,22 @@
+// Home.tsx
+import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Form from "../../components/Form";
 import PersonalDatas from "../../components/PersonalData";
+import Modal from "../../components/Modal";
 import earthVideo from "./earth.mp4";
 
 const Home = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleDataClick = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <div className="relative h-screen overflow-hidden">
       <Navbar />
@@ -14,9 +27,16 @@ const Home = () => {
           </div>
         </div>
         <div className="md:w-1/2 rounded-md p-5">
-          <PersonalDatas />
+          <button onClick={handleDataClick}>
+            <PersonalDatas />
+          </button>
         </div>
       </div>
+      <Modal show={showModal} onClose={handleCloseModal}>
+        {/* Additional details go here */}
+        <h2>Details</h2>
+        <p>More information about the selected data...</p>
+      </Modal>
     </div>
   );
 };
